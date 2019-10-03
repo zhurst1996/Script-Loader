@@ -1,0 +1,34 @@
+<div id="QAToolsContainer">
+	<style>
+#Tools {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+	border: solid 1px blue;
+	padding: 5px;
+}
+#QATools .close-tools {
+	float: right;
+}
+	</style>
+	<div id="QATools">
+		<a href="#" class="close-tools">[X]</a>
+		<select class="available-scripts"></select>
+	</div>
+
+    <script>
+
+        $.get('/list-scripts', function(scripts){
+            var options = []
+            $.each(scripts, function(i, script){
+                var $opt = $('<option>')
+                    .prop('val', script)
+                    .text(script.replace(/\.js$/, ''));
+
+                options.push($opt);
+            });
+            $('#QATools .available-scripts').html(options);
+        })
+    </script>
+</div>

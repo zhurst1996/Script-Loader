@@ -1,0 +1,93 @@
+<div id="QAToolsContainer">
+    <style>
+        div#QATools {
+            top: 30px;
+            left: 15px;
+            position: fixed;
+            font-family: verdana;
+            width: fit-content;
+            background-color: #FFF;
+            border-radius: 5px;
+            padding: 15px;
+            z-index: 99999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            height: 170px;
+        }
+
+        #QATools input {
+            min-width: fit-content;
+        }
+
+        #QATools .available-scripts {
+            min-width: 400px;
+            max-width: 400px;
+            padding-top: 10px;
+            margin-bottom: 10px
+        }
+
+        #QATools .reloadPage {
+            color: blue;
+            font-weight: 750px;
+            text-decoration: none;
+            font-size: 15px
+        }
+
+        #QATools .reloadPage:hover {
+            color: darkblue
+        }
+
+        #QATools a.run-script-button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 8px 9px;
+            background-color: rgb(51, 122, 183);
+            font-weight: 750px;
+            border: 1px solid rgb(51, 122, 183);
+            color: ghostwhite;
+            border-radius: 3px;
+            text-decoration: none;
+            float: right;
+            font-size: 10px
+        }
+
+        #QATools .run-script-button:hover {
+            background-color: #286090;
+            border-color: #204d74;
+            font-size: 10px
+        }
+
+        #QATools .close-tools {
+            float: right;
+            font-weight: bold;
+            color: red;
+            font-size: 10px;
+            text-decoration: none;
+        }
+
+        #QATools .close-tools:hover {
+            color: rgb(177, 0, 0);
+            font-size: 10px
+        }
+
+        .onpage {
+            border: 1px ridge red;
+        }
+
+        #QATools #member {
+            color: darkblue;
+            margin-top: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px
+        }
+    </style>
+    <div id="QATools" hidden>
+        <a href="javascript:window.location.reload()" class="reloadPage">↻</a>
+        <a href="#" class="close-tools">X</a>
+        <div id="member">
+            <strong></strong>
+        </div>
+        <div>
+            <select class="available-scripts"></select>
+            <a href="#" class="run-script-button">RUN SCRIPT</a>
+        </div>
+    </div>
+</div>
